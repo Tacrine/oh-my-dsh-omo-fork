@@ -1,0 +1,85 @@
+{
+  "name": "@tacrine/oh-my-dsh-omo-fork",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A fork of OMO packaged for DeepSeek Harness: the tri-agent agent preset (Atlas orchestration + Prometheus planning) as a publishable Cordis bundle.",
+  "type": "module",
+  "main": "./plan-aware-persona.mjs",
+  "exports": {
+    ".": "./plan-aware-persona.mjs",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "plan-aware-persona.mjs",
+    "personas/",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "tools/"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-agent-instructions": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-agent-preset": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-command-compact": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-command-goal": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-compaction-basic": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-compaction-tool-result-pruner": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-plan-mode": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-skill-filesystem": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-ask-user": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-bash": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-fs": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-fs-search": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-goal": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-jobs": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-present": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-pwsh": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-ralph": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-skill": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-subagent": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-subagent-control": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-todo": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-web": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-tool-workflow": ">=0.1.7-rc.2 <0.2.0",
+    "@deepseek-ai/dsh-workflow-ptc": ">=0.1.7-rc.2 <0.2.0"
+  },
+  "scripts": {
+    "gen": "node tools/gen-preset-bundle.mjs",
+    "verify": "node tools/verify-preset-bundle.mjs"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "license": "MIT",
+  "author": "Tacrine",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tacrine/oh-my-dsh-omo-fork.git"
+  },
+  "homepage": "https://github.com/Tacrine/oh-my-dsh-omo-fork#readme",
+  "bugs": {
+    "url": "https://github.com/Tacrine/oh-my-dsh-omo-fork/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "agent-preset",
+    "tri-agent",
+    "oh-my-dsh",
+    "omo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
