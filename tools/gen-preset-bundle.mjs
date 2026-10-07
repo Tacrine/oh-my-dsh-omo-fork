@@ -80,7 +80,7 @@ const flags = parseArgs(process.argv.slice(2))
 const LEGACY = flags.legacy ?? join(homedir(), '.dsh', '.agent-presets', 'tri-agent')
 const OUT = flags.out ?? join(import.meta.dirname, '..')
 
-const PACKAGE = flags.package ?? '@tacrine/oh-my-dsh-omo-fork'
+const PACKAGE = flags.package ?? '@tacrine_f/oh-my-dsh-omo-fork'
 const ORDER = 10
 
 /** `!!js` expression resolving this bundle's installed package directory. */

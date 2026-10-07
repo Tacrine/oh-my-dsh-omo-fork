@@ -49,7 +49,7 @@
           # This row REPLACES the legacy persona plugin registration so that exactly one
           # `deployment:` persona-prefix registration exists in this agent scope.
           - id: persona
-            name: '@tacrine/oh-my-dsh-omo-fork'
+            name: '@tacrine_f/oh-my-dsh-omo-fork'
             config:
               suffix: Your working directory is {{cwd}}.
 
@@ -222,7 +222,7 @@
                   toolName: subagent_explore
                   backgroundMode: continuable
                   maxDepth: 1
-                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', 'explore.md'), 'utf8')
+                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', 'explore.md'), 'utf8')
                   toolFilter:
                     deny:
                       - write
@@ -257,7 +257,7 @@
                   toolName: subagent_librarian
                   backgroundMode: continuable
                   maxDepth: 1
-                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', 'librarian.md'), 'utf8')
+                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', 'librarian.md'), 'utf8')
                   toolFilter:
                     deny:
                       - write
@@ -292,7 +292,7 @@
                   toolName: subagent_oracle
                   backgroundMode: continuable
                   maxDepth: 1
-                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', 'oracle.md'), 'utf8')
+                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', 'oracle.md'), 'utf8')
                   toolFilter:
                     deny:
                       - write
@@ -327,7 +327,7 @@
                   toolName: subagent_momus
                   backgroundMode: continuable
                   maxDepth: 1
-                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', 'momus.md'), 'utf8')
+                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', 'momus.md'), 'utf8')
                   toolFilter:
                     deny:
                       - write
@@ -362,7 +362,7 @@
                   toolName: subagent_multimodal_looker
                   backgroundMode: continuable
                   maxDepth: 1
-                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', 'multimodal-looker.md'), 'utf8')
+                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', 'multimodal-looker.md'), 'utf8')
                   toolFilter:
                     allow:
                       - read
@@ -375,7 +375,7 @@
                   toolName: subagent_sisyphus_junior
                   backgroundMode: continuable
                   maxDepth: 1
-                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', 'sisyphus-junior.md'), 'utf8')
+                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', 'sisyphus-junior.md'), 'utf8')
                   toolFilter:
                     deny:
                       - subagent_fork
@@ -406,7 +406,7 @@
                   toolName: subagent_metis
                   backgroundMode: continuable
                   maxDepth: 3
-                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', 'metis.md'), 'utf8')
+                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', 'metis.md'), 'utf8')
                   toolFilter:
                     deny:
                       - write
@@ -439,7 +439,7 @@
                   toolName: subagent_hephaestus
                   backgroundMode: continuable
                   maxDepth: 3
-                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', 'hephaestus.md'), 'utf8')
+                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', 'hephaestus.md'), 'utf8')
                   toolFilter:
                     deny:
                       - subagent_fork
@@ -469,7 +469,7 @@
                   toolName: subagent_sisyphus
                   backgroundMode: continuable
                   maxDepth: 3
-                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', 'sisyphus.md'), 'utf8')
+                  persona: !!js process.getBuiltinModule('node:fs').readFileSync(process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', 'sisyphus.md'), 'utf8')
                   toolFilter:
                     deny:
                       - subagent_fork

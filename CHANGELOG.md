@@ -21,9 +21,9 @@ First published release: the `tri-agent` agent preset (Atlas orchestration + Pro
 
 A legacy preset directory is an *include file*; a bundle patch is not. Both of its relative anchors would otherwise resolve against the profile directory and fail to mount, so the generator applies exactly three rewrites, and the verifier asserts exactly the same three:
 
-1. **The package self-reference** — the relative plugin name `./plan-aware-persona.mjs` is re-anchored onto the installed package (`name: '@tacrine/oh-my-dsh-omo-fork'`), so the persona plugin resolves from the package rather than the profile.
+1. **The package self-reference** — the relative plugin name `./plan-aware-persona.mjs` is re-anchored onto the installed package (`name: '@tacrine_f/oh-my-dsh-omo-fork'`), so the persona plugin resolves from the package rather than the profile.
 2. **The nine persona path anchors** — every `fileURLToPath(new URL('./personas/<file>', baseUrl))` becomes
-   `join(dirname(createRequire(baseUrl).resolve('@tacrine/oh-my-dsh-omo-fork/package.json')), 'personas', '<file>')`,
+   `join(dirname(createRequire(baseUrl).resolve('@tacrine_f/oh-my-dsh-omo-fork/package.json')), 'personas', '<file>')`,
    for the 9 anchored subagent rows.
 3. **The multimodal `agentOptions` block is removed** — the machine-local `provider`/`model` route for `subagent_multimodal_looker` does not ship. Consumers re-add their own route; the published patch never pins a machine-specific provider.
 

@@ -32,14 +32,14 @@ patch 挂载以下 peer 包，由 DSH 提供：
 把 CLI 指向你的 DSH checkout 的 bin 文件，并把安装转发给 profile：
 
 ```powershell
-node "<dsh bin>" plugin --profile <profile> add -w @tacrine/oh-my-dsh-omo-fork
+node "<dsh bin>" plugin --profile <profile> add -w @tacrine_f/oh-my-dsh-omo-fork
 ```
 
 例如，若运行时是 `<dsh runtime>`，则 `<dsh bin>` 为
 `<dsh runtime>\@deepseek-ai\dsh\lib\bin.js`：
 
 ```powershell
-node "<dsh runtime>\@deepseek-ai\dsh\lib\bin.js" plugin --profile web add -w @tacrine/oh-my-dsh-omo-fork
+node "<dsh runtime>\@deepseek-ai\dsh\lib\bin.js" plugin --profile web add -w @tacrine_f/oh-my-dsh-omo-fork
 ```
 
 该命令在 `$DSH_HOME\profiles\<profile>\` 内运行 pnpm，因此它会写入一条 `dependencies`。**它不会改动 `dsh.profile.bundles`。**
@@ -54,7 +54,7 @@ node "<dsh runtime>\@deepseek-ai\dsh\lib\bin.js" plugin --profile web add -w @ta
     "profile": {
       "bundles": [
         // ...你已有的 bundles...
-        "@tacrine/oh-my-dsh-omo-fork"
+        "@tacrine_f/oh-my-dsh-omo-fork"
       ]
     }
   }
@@ -72,7 +72,7 @@ $env:DSH_HOME = "<dsh home>"
 node "<dsh bin>" --profile <profile> --dump-config
 ```
 
-输出中应出现一条 `preset-tri-agent` row，其 `name` 为 `@tacrine/oh-my-dsh-omo-fork`，并且有九条经由该包解析的 `personas` 表达式。
+输出中应出现一条 `preset-tri-agent` row，其 `name` 为 `@tacrine_f/oh-my-dsh-omo-fork`，并且有九条经由该包解析的 `personas` 表达式。
 
 ## 安装后你可能需要自己做的改动
 
@@ -126,7 +126,7 @@ DSH profile 的 `.npmrc` 设置了 `auto-install-peers=false`，因此这些 pee
 在仓库根目录运行：
 
 ```powershell
-node "E:\Downloads\oh-my-dsh-omo-fork\tools\verify-preset-bundle.mjs" --runtime "<dsh runtime node_modules>" --legacy "<指向 legacy agent.cordis.yml 文件>" --patch "E:\Downloads\oh-my-dsh-omo-fork\cordis.patch.yml" --package @tacrine/oh-my-dsh-omo-fork
+node "E:\Downloads\oh-my-dsh-omo-fork\tools\verify-preset-bundle.mjs" --runtime "<dsh runtime node_modules>" --legacy "<指向 legacy agent.cordis.yml 文件>" --patch "E:\Downloads\oh-my-dsh-omo-fork\cordis.patch.yml" --package @tacrine_f/oh-my-dsh-omo-fork
 ```
 
 注意 `--legacy` 取的是**文件**（`agent.cordis.yml`），不是它所在的目录。
@@ -154,7 +154,7 @@ node "E:\Downloads\oh-my-dsh-omo-fork\tools\verify-preset-bundle.mjs"
 `cordis.patch.yml` 是生成产物 —— 不要手工编辑它。请修改 legacy preset 目录，然后：
 
 ```powershell
-node tools/gen-preset-bundle.mjs --legacy "<legacy 目录>" --out . --package @tacrine/oh-my-dsh-omo-fork
+node tools/gen-preset-bundle.mjs --legacy "<legacy 目录>" --out . --package @tacrine_f/oh-my-dsh-omo-fork
 ```
 
 `--legacy` 默认 `$HOME/.dsh/.agent-presets/tri-agent`，`--out` 默认仓库根目录，`--package` 默认本包名。生成器会打印三个计数器：

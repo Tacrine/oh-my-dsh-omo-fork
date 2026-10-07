@@ -1,5 +1,5 @@
 {
-  "name": "@tacrine/oh-my-dsh-omo-fork",
+  "name": "@tacrine_f/oh-my-dsh-omo-fork",
   "version": "0.1.0",
   "private": false,
   "description": "A fork of OMO packaged for DeepSeek Harness: the tri-agent agent preset (Atlas orchestration + Prometheus planning) as a publishable Cordis bundle.",

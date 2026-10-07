@@ -32,14 +32,14 @@ Installation is **two explicit steps**. Step 1 installs the dependency; step 2 t
 Point the CLI at your DSH checkout's bin file, and forward the install to the profile:
 
 ```powershell
-node "<dsh bin>" plugin --profile <profile> add -w @tacrine/oh-my-dsh-omo-fork
+node "<dsh bin>" plugin --profile <profile> add -w @tacrine_f/oh-my-dsh-omo-fork
 ```
 
 For example, on a checkout whose runtime is `<dsh runtime>`, `<dsh bin>` is
 `<dsh runtime>\@deepseek-ai\dsh\lib\bin.js`, so:
 
 ```powershell
-node "<dsh runtime>\@deepseek-ai\dsh\lib\bin.js" plugin --profile web add -w @tacrine/oh-my-dsh-omo-fork
+node "<dsh runtime>\@deepseek-ai\dsh\lib\bin.js" plugin --profile web add -w @tacrine_f/oh-my-dsh-omo-fork
 ```
 
 This runs pnpm inside `$DSH_HOME\profiles\<profile>\`, so it writes a `dependencies` entry. **It does not touch `dsh.profile.bundles`.**
@@ -54,7 +54,7 @@ Open `$DSH_HOME\profiles\<profile>\package.json` and add the package name to the
     "profile": {
       "bundles": [
         // ...your existing bundles...
-        "@tacrine/oh-my-dsh-omo-fork"
+        "@tacrine_f/oh-my-dsh-omo-fork"
       ]
     }
   }
@@ -72,7 +72,7 @@ $env:DSH_HOME = "<dsh home>"
 node "<dsh bin>" --profile <profile> --dump-config
 ```
 
-The output should contain a `preset-tri-agent` row whose `name` is `@tacrine/oh-my-dsh-omo-fork`, and nine `personas` expressions resolving through that package.
+The output should contain a `preset-tri-agent` row whose `name` is `@tacrine_f/oh-my-dsh-omo-fork`, and nine `personas` expressions resolving through that package.
 
 ## Post-install edits you may need
 
@@ -126,7 +126,7 @@ The DSH profile's `.npmrc` sets `auto-install-peers=false`, so these peers are *
 Run it from the repository root:
 
 ```powershell
-node "E:\Downloads\oh-my-dsh-omo-fork\tools\verify-preset-bundle.mjs" --runtime "<dsh runtime node_modules>" --legacy "<path to the legacy agent.cordis.yml file>" --patch "E:\Downloads\oh-my-dsh-omo-fork\cordis.patch.yml" --package @tacrine/oh-my-dsh-omo-fork
+node "E:\Downloads\oh-my-dsh-omo-fork\tools\verify-preset-bundle.mjs" --runtime "<dsh runtime node_modules>" --legacy "<path to the legacy agent.cordis.yml file>" --patch "E:\Downloads\oh-my-dsh-omo-fork\cordis.patch.yml" --package @tacrine_f/oh-my-dsh-omo-fork
 ```
 
 Note `--legacy` takes the **file** (`agent.cordis.yml`), not the directory that holds it.
@@ -154,7 +154,7 @@ So: set `DSH_RUNTIME` to the runtime's `node_modules` (or pass `--runtime`) befo
 `cordis.patch.yml` is generated — do not hand-edit it. Edit the legacy preset directory, then:
 
 ```powershell
-node tools/gen-preset-bundle.mjs --legacy "<legacy dir>" --out . --package @tacrine/oh-my-dsh-omo-fork
+node tools/gen-preset-bundle.mjs --legacy "<legacy dir>" --out . --package @tacrine_f/oh-my-dsh-omo-fork
 ```
 
 `--legacy` defaults to `$HOME/.dsh/.agent-presets/tri-agent`, `--out` to the repository root and `--package` to this package's name. The generator prints its three counters:
